@@ -4,23 +4,18 @@
 ###### tags: `planning` `examination`
 ---
 **Table of Contents**
-[TOC]
-## Tutorial on how to build a temperature and humidity sensor
+> - [IDEA]
+> - [Objectives]
+> - [Material]
+> - [Environment setup]
 
-Give a short and brief overview of what your project is about.
-What needs to be included:
-
-- [ ] Title
-- [ ] Your name and student credentials (xx666xxx)
-- [ ] Short project overview
-- [ ] How much time it might take to do (approximation)
 ### Idea
-I started this project as a beehive counter planning to make some modifications on a already existing project called Easy Bee Counter found here https://github.com/hydronics2/2019-easy-bee-counter. Plan was to make it a little smaller then the original, use a loopy4 as main board  and  LoRaWAN® (Long Range Wide Area Network) as my communication protocol.
+I started this project as a beehive counter planning to make some modifications on a already existing project called Easy Bee Counter found [here](https://github.com/hydronics2/2019-easy-bee-counter). Plan was to make it a little smaller then the original, use a [Pycom Lopy4](https://pycom.io/product/lopy4/) as main board  and  [LoRaWAN®](https://lora-alliance.org/about-lorawan/) as my communication protocol.
 
 But sins I have problem getting all the required components in time I was forced to rethink and use what components I got at home. With that in mind I changed Idea to a measure water level in my old hand dug well.
 The Idea is to use an Ultra Sonic Distance Sensor, HC-SR04. Make a box for it so I can Mount it just under the well lid and establish a “normal” water level distance.
 After that I plan to trigger readings to keep track hon how much water I user in my well.
- I can then integrate these measures in my Home Assistant (Home Assistant (home-assistant.io) Controller to make Automations based on water level ex. Stop watering my garden plants. 
+ I can then integrate these measures in my [Home Assistant](home-assistant.io) Controller to make automations based on water level ex. Stop watering my garden plants. 
 I can also based on measures taken see how fast my well is refilled
 
 ### Objectives
@@ -36,18 +31,17 @@ Explain all material that is needed. All sensors, where you bought them and thei
 - [ ] List of material
 - [ ] What the different things (sensors, wires, controllers) do - short specifications
 - [ ] Where you bought them and how much they cost
->| Componenct | Type |Price | Vendor |
+>| Component | Type |Price | Vendor |
 >| --------- | ---------------- | ------------- |---------------------|
->| [Pycom Lopy4](https://pycom.io/product/lopy4/)   | MicroController| 480 skr   | [Digikey](https://www.digikey.se/products/sv?keywords=lopy4)
->| Arduino Antenn för GSM och LoRa(https://www.kjell.com/se/produkter/el-verktyg/arduino/arduino-tillbehor/arduino-antenn-for-gsm-och-lora-p87287)| 99.90 KR | Kjell och Company(https://www.kjell.com/)
+>| [Pycom Lopy4](https://pycom.io/product/lopy4/)   | Microcontroller| 480 kr   |[Digikey](https://www.digikey.se/products/sv?keywords=lopy4)
+>|[Pycom Expansion Board 3](https://www.digikey.se/product-detail/en/pycom-ltd/UNIVERSAL-EXPANSION-BOARD/1871-1004-ND/7721842)|Expansion Board|183 kr|[Digikey](https://www.digikey.se/product-detail/en/pycom-ltd/UNIVERSAL-EXPANSION-BOARD/1871-1004-ND/7721842)
+>| [Arduino Antenn för GSM och LoRa](https://www.kjell.com/se/produkter/el-verktyg/arduino/arduino-tillbehor/arduino-antenn-for-gsm-och-lora-p87287)| Antenna |99.90 kr | [Kjell och Company](https://www.kjell.com/)
+>|[Ultrasonic Distance Sensor - HC-SR04](https://www.sparkfun.com/products/15569)|Sensor|39 kr|[Sparkfun](https://www.sparkfun.com/products/15569)|
+>|[3st motstånd 1Ω](https://www.kjell.com/se/produkter/el-verktyg/elektronik/komponentsatser/playknowlogy-sortiment-med-resistorer-600-pack-p90646)|Resistor| 0.60 kr|[Kjell och Company](https://www.kjell.com/)|
+
 
 ### Environment setup
-
-How is the device programmed. Which IDE are you using. Describe all steps from flashing the firmware, installing plugins in your favorite editor. How flashing is done on MicroPython. The aim is that someone should be able to understand how to reproduce your project.
-
-- [ ] Chosen IDE
-- [ ] How the code is uploaded
-- [ ] Steps that you needed to do for your computer. Installation of Node.js, extra drivers, etc.
+I have used *[VSCode](https://code.visualstudio.com/)* with the *[Pymakr](https://docs.pycom.io/gettingstarted/software/vscode/)* plugin and the *[Pycom Expansion Board 3](https://docs.pycom.io/datasheets/expansionboards/expansion3/)* to be able to connect and program the microcontroller. Also *[node.js](https://nodejs.org/en/)* is an requiment for the plugin to work.
 
 ### Putting everything together
 
