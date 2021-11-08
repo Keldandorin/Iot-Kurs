@@ -1,58 +1,10 @@
 # Expertkompetens 
-## Project report - IoT report template 
+## Project report - The Bee Hive counter that changed to a water well meter
 
 ###### tags: `planning` `examination`
 ---
 **Table of Contents**
-
-
 [TOC]
-
-## How to write your report
-
-We have chosen to streamline your assignment as a tutorial, written in the Markdown language using a standard template (below). The main reason behind this is to make it as simple as possible, still flexible and easy to share between all classmates and other peers.
-
-The report should be available on a public Github repository.
-
-```
-Information want's to be free - let's keep everything open, shall we?
-```
-
-## Github
-
-Publish your project directly to Github. In that case write your tutorial in the `README.md` file. If you have no prior experience with Github this is a very good first time to learn. Easiest is to use the Github Desktop application, or you can also do everything from the web browser (editing and uploading etc.). Also, there are Git-plugins for VSCode and Atom which also makes things very easy.
-
-Make sure you create a public repository and also that you write the report in the `README.md` file.
-
-![](https://i.imgur.com/mp596wk.png)
-![](https://i.imgur.com/DwkCnGE.png)
-
-
-## Some examples for inspiration
-
-**Note these are from the basic courses.**
-
-Check out this link: [Good examples from previous summer courses](https://hackmd.io/@lnu-iot/good-examples)
-
-
-
-----
-
-Some additional examples for inspiration.
-
-- [GPS Car tracker with notification](https://www.instructables.com/id/GPS-Car-Tracker-With-SMS-Notification-and-Thingspe/)
-- [Blynk style button](https://www.instructables.com/id/Arduino-Tutorial-BLYNK-Style-Button-and-ESP-01-Rel/)
-- [IoT weather station](https://www.hackster.io/rijk_meurs/iot-weather-station-4c29c6)
-- [Mini IoT weather station](https://www.hackster.io/FunguyPro/how-to-make-an-mini-iot-weather-station-58252d)
-- [Distance sensor](https://community.mydevices.com/t/nodemcu-esp8266-hc-sr04/2872)
-
----
-
-
-# Template
-
-**Please keep the total length of the report below 40k characters.** You can include code that is linked to a repository. Keep the code snippets in the report short, and rather link to relevant sections in the repository. The code snippets should only be relevant for explaining on a higher level.
-
 ## Tutorial on how to build a temperature and humidity sensor
 
 Give a short and brief overview of what your project is about.
@@ -62,14 +14,20 @@ What needs to be included:
 - [ ] Your name and student credentials (xx666xxx)
 - [ ] Short project overview
 - [ ] How much time it might take to do (approximation)
+### Idea
+I started this project as a beehive counter planning to make some modifications on a already existing project called Easy Bee Counter found here https://github.com/hydronics2/2019-easy-bee-counter. Plan was to make it a little smaller then the original, use a loopy4 as main board  and  LoRaWAN® (Long Range Wide Area Network) as my communication protocol.
+
+But sins I have problem getting all the required components in time I was forced to rethink and use what components I got at home. With that in mind I changed Idea to a measure water level in my old hand dug well.
+The Idea is to use an Ultra Sonic Distance Sensor, HC-SR04. Make a box for it so I can Mount it just under the well lid and establish a “normal” water level distance.
+After that I plan to trigger readings to keep track hon how much water I user in my well.
+ I can then integrate these measures in my Home Assistant (Home Assistant (home-assistant.io) Controller to make Automations based on water level ex. Stop watering my garden plants. 
+I can also based on measures taken see how fast my well is refilled
 
 ### Objectives
-
-Describe why you have chosen to build this specific device. What purpose does it serve? What do you want to do with the data, and what new insights do you think it will give?
-
-- [ ] Why you chose the project
-- [ ] What purpose does it serve
-- [ ] What insights you think it will give
+•	Register an account on The Things Network
+Figure out how to connect a Lopy4 to TTN Network and send measurements to the MQTT gateway
+Recover the messages with Node-Red in on my local network and then send the values to my local Home Assistant installation.
+Build some automations based on values received.
 
 ### Material
 
@@ -78,19 +36,10 @@ Explain all material that is needed. All sensors, where you bought them and thei
 - [ ] List of material
 - [ ] What the different things (sensors, wires, controllers) do - short specifications
 - [ ] Where you bought them and how much they cost
-
-
-> Example:
->| IoT Thing | For this         |
->| --------- | ---------------- |
->| Perhaps   | a table          |
->| is a      | jolly good idea? |
->
->In this project I have chosen to work with the Pycom LoPy4 device as seen in Fig. 1, it's a neat little device programmed by MicroPython and has several bands of connectivity. The device has many digital and analog input and outputs and is well suited for an IoT project.
->
->![LoPy!](https://pycom.io/wp-content/uploads/2018/08/lopySide-1.png)
->Fig. 1. LoPy4 with headers. Pycom.io
-
+>| Componenct | Type |Price | Vendor |
+>| --------- | ---------------- | ------------- |---------------------|
+>| [Pycom Lopy4](https://pycom.io/product/lopy4/)   | MicroController| 480 skr   | [Digikey](https://www.digikey.se/products/sv?keywords=lopy4)
+>| Arduino Antenn för GSM och LoRa(https://www.kjell.com/se/produkter/el-verktyg/arduino/arduino-tillbehor/arduino-antenn-for-gsm-och-lora-p87287)| 99.90 KR | Kjell och Company(https://www.kjell.com/)
 
 ### Environment setup
 
