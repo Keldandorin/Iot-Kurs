@@ -19,7 +19,7 @@ I started this project as a beehive counter planning to make some modifications 
 But sins I have problem getting all the required components in time I was forced to rethink and use what components I got at home. With that in mind I changed Idea to a measure water level in my old hand dug well.
 The Idea is to use an Ultra Sonic Distance Sensor, HC-SR04. Make a box for it so I can Mount it just under the well lid and establish a “normal” water level distance.
 
-<img src="./img/well.jpg" width=20%>
+<img src="./img/well.jpg" width=25%>
 
 After that I plan to trigger readings to keep track hon how much water I user in my well.
  I can then integrate these measures in my [Home Assistant](home-assistant.io) Controller to make automations based on water level ex. Stop watering my garden plants. 
