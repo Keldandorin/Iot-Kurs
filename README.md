@@ -48,7 +48,7 @@ I have used *[VSCode](https://code.visualstudio.com/)* with the *[Pymakr](https:
 
 ## Putting everything together
 
-<img src="./img/ultrasonic-schematic.jpg" width=30%>
+<img src="./img/schematic.jpg" width=30%>
 
 Sins the Pycom board is a 3.5V and [HC-SR04](https://www.sparkfun.com/products/15569) is a 5V sensor we need to have a USB cabel connected to the Pycom Board. We also need to step down the echo voltage from 5 to 3.3V there for the three 1k resistors.
 
