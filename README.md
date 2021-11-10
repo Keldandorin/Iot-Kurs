@@ -1,5 +1,5 @@
 # Expertkompetens 
-## Project report - The Bee Hive counter that changed to a water well meter
+## Project report - The Beehive counter that changed to a water well meter
 
 ###### tags: `planning` `examination`
 ---
